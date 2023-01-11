@@ -1,0 +1,140 @@
+.Container{
+    background-color: #f1f1f1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Form{
+    background-color: white;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 50px;
+    height: fit-content;
+    border: 1px solid silver;
+}
+.Form h1{
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    color: #1a73e8;
+}
+.inputBox{
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.inputBox label{
+    margin-bottom: 5px;
+    color: rgb(85 ,85 , 85);
+    font-size: 0.9rem;
+}
+.inputBox:nth-child(6) label{
+    color: #1a73e8;
+}
+.formInput{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid silver;
+    transition: all 0.2s ease-in;
+}
+.uncompleted{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid red;
+    transition: all 0.2s ease-in;
+}
+.formInput:focus , .uncompleted:focus{
+    line-height: 30px;
+    outline: none;
+    height: 30px;
+    border: 1px solid #1a73e8;
+}
+.inputBox span , .CheckBox span{
+    color: red;
+    height: 10px;
+    transition: all 0.1s linear;
+    line-height: 10px;
+    font-size: 0.7rem;
+    margin-top: 5px;
+    width: fit-content;
+    padding: 2px 3px;
+    border-radius: 3px;
+    background-color: rgba(265 , 0 , 0 , 0.135);
+}
+.CheckBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    font-size: 0.85rem;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+input[type="checkbox"]{
+    margin-left: 20px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #1a73e8;
+    appearance: none;
+    border-radius: 3px;
+    transition: all 0.2s ease-in;
+}
+input[type="checkbox"]:checked {
+    background-color: #1a73e8;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+}
+input[type="checkbox"]:focus {
+    outline: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #004aaa;
+}
+.Actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Actions button{
+    border: none;
+    outline: none;
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease-in;
+    font-weight: 500;
+    cursor: pointer;
+}
+.Actions button:hover{
+    background-color: #004aaa;
+}
+.Actions a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #1a73e8;
+    transition: all 0.3s ease-in;
+}
+.Actions a:hover{
+    color: #004aaa;
+}
+@media (max-width: 440px) {
+    .Form{
+        padding: 20px;
+        margin: 50px 20px;
+        width: 90%;
+    }
+    .formInput , .uncompleted{
+        width: 90%;
+    }
+}
+body{
+    overflow-x: hidden;
+}
